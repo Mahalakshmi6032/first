@@ -1,0 +1,29 @@
+<p class="maha"> Hi </p> <hr>
+<app-sun> </app-sun> <hr>
+<app-star> </app-star> <hr>
+<app-formparent></app-formparent>
+<hr>
+<h1> Service </h1>
+<div *ngFor = "let item of bread">
+ The name of the person: {{item.name}} and {{item.age}}   
+</div>
+<hr>
+<h1> Routing Program </h1>
+<br>
+<nav class="navbar navbar-default navbar-expand bg-light">
+    <div class="container-fluid">
+<ul class="navbar-nav me-auto">
+      <li class="nav-item"> <a class="nav-link" [routerLink]="['']"> Home </a> </li>
+      <li class="nav-item"> <a class="nav-link"[routerLink]="['about']"> about</a> </li>
+      <li class="nav-item"> <a class="nav-link"[routerLink]="['contact']"> contact </a> </li>
+    </ul>
+    </div>
+</nav>
+<br>
+<router-outlet></router-outlet>
+<hr>
+<app-template></app-template>
+<hr> 
+<app-reactive></app-reactive> 
+<hr>
+<app-paragraph></app-paragraph>

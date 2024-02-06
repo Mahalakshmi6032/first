@@ -1,0 +1,85 @@
+<h1>star works!</h1> <hr>
+<h2> {{title}} </h2> 
+<ul> 
+    <li *ngFor = "let fruit of fruits"> 
+        {{fruit}}
+    </li>
+    </ul>
+    <hr>
+    <div>
+        <h2>{{title}}</h2>
+    </div>
+      <div>
+         <table class="table table-border table-striped">
+            <tbody>
+                <tr *ngFor = "let fruit of fruits">
+                    <td>{{fruit}} </td>
+                </tr>
+            </tbody>
+         </table>
+      </div>
+      <hr>
+      <h1> ng Switch </h1>
+      <div class='card'>
+        <div class='card-header'>
+          ngSwitch Example
+        </div>
+        <div class="card-body">
+          Input string : <input type='text' [(ngModel)]="num" >
+       
+          <div [ngSwitch]="num">
+            <div *ngSwitchCase="1">One</div>
+            <div *ngSwitchCase="2">Two</div>
+            <div *ngSwitchCase="'3'">Three</div>
+            <div *ngSwitchCase="'4'">Four</div>
+            <div *ngSwitchCase="'5'">Five</div>
+            <div *ngSwitchDefault>This is Default</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h1> Ng if </h1>
+      <h3 *ngIf="true"> Mahalakshmi </h3>
+      <label> Checkbox </label>
+      <input type="checkbox" [(ngModel)]="show">
+      <p *ngIf="show"> Show is Checked</p>
+      <p *ngIf="!show"> Show is unChecked</p>
+      <hr>
+      <h1> Ng Class </h1>
+      <p [ngClass] ="['primary','big','italic']"> Mahalakshmi A </p>
+      <hr>
+      <h1> Ng Style</h1>
+      <div [ngStyle] = "{'color':'blue', 'font-size':'30px',}"> thanu K9 </div> 
+      <hr>
+
+  <h1>Data Binding String Interpolation</h1>
+  <h2>{{firstName}}{{lastName}}</h2>
+  <hr>
+  <h1>Data Binding Property Binding</h1>
+  <h2 [innerHTML]="head"></h2>
+
+  <h1>Two way Binding</h1>
+  <p>{{name}}</p>
+  <br>
+  <input type="text"[(ngModel)]="name">
+
+  <h1>Event Binding</h1>
+  <p>increment value{{count}}</p>
+  <button on-click="click()">inc</button>
+  <button on-click="click1()">dec</button>
+  <hr>
+  
+       <h1> Pipes </h1>
+        <p> unformatted Date: {{toDate}} </p>
+        <p> formatted Date: {{toDate|date}} </p>
+        <p> Medium Date: {{toDate|date:'medium'}} </p>
+        <p> Short Date: {{toDate|date:'short'}} </p>
+        <p> full Date: {{toDate|date:'fullDate'}} </p>
+        <p> Original: {{message}} </p>
+        <p> uppercase: {{message|uppercase}} </p>
+        <p> Lowercase: {{message|lowercase}} </p>
+        <p> Slice: {{message|slice:3:8}} </p>
+        <p> Slice: {{message|slice:0:3}} </p>
+        <p> Original: {{cash}} </p>
+        <p> Currency Format: {{cash|currency}} </p>
+        <p> Currency Format: {{cash|currency:'INR'}} </p>
